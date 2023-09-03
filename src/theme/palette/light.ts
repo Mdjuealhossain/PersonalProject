@@ -29,7 +29,7 @@ export default {
     dark: "#2E2E47",
     main: "#464567",
     light: "#605F8E",
-    contrastText: "#fff",
+    contrastText: "#ffffff",
   },
   success: {
     dark: "rgba(29, 255, 158, 1)",

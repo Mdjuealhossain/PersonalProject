@@ -6,11 +6,10 @@ import dark from "src/theme/palette/dark";
 const ResAdmineSidebar = () => {
   return (
     <AppBar
-      position="fixed"
-      sx={{
-        padding: 2,
-        background: "#ffffff",
-      }}
+      sx={(theme) => ({
+        bgcolor: theme.palette.info.contrastText,
+        p: 10,
+      })}
     >
       <Box sx={{ display: "flex" }}>
         <IconButton sx={{ height: 30, width: 50, color: dark.info?.dark }}>
