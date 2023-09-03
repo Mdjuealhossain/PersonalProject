@@ -31,5 +31,12 @@ const MuiIconButton: Components<Theme>["MuiIconButton"] = {
     root: ({ theme, ownerState }) => ({}),
   },
 };
+const MuiSvgIcon: Components<Theme>["MuiSvgIcon"] = {
+  styleOverrides: {
+    root: ({ theme, ownerState }) => ({
+      fontSize: 28,
+    }),
+  },
+};
 
-export default { MuiButton, MuiButtonBase, MuiIconButton };
+export default { MuiButton, MuiButtonBase, MuiIconButton, MuiSvgIcon };

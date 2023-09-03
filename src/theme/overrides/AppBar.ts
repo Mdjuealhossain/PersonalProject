@@ -7,7 +7,10 @@ const MuiAppBar: Components<Theme>["MuiAppBar"] = {
     }),
     positionFixed: ({ theme, ownerState }) => ({
       left: 0,
-      right: 1280,
+      right: 1252,
+    }),
+    colorInherit: ({ theme, ownerState }) => ({
+      background: theme.palette.info.dark,
     }),
   },
 };

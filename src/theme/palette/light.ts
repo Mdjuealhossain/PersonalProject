@@ -26,13 +26,13 @@ export default {
     contrastText: "#fff",
   },
   info: {
-    dark: "#01579b",
-    main: "#0288d1",
-    light: "#03a9f4",
+    dark: "#2E2E47",
+    main: "#464567",
+    light: "#605F8E",
     contrastText: "#fff",
   },
   success: {
-    dark: "#1b5e20",
+    dark: "rgba(29, 255, 158, 1)",
     main: "#2e7d32",
     light: "#4caf50",
     contrastText: "#fff",
@@ -54,9 +54,9 @@ export default {
     A700: "#616161",
   },
   text: {
-    primary: "rgba(0, 0, 0, 0.87)",
-    secondary: "rgba(0, 0, 0, 0.6)",
-    disabled: "rgba(0, 0, 0, 0.38)",
+    primary: "rgba(255, 255, 255, 0.67)",
+    secondary: "rgba(255, 255, 255, 0.32)",
+    disabled: "rgba(255, 255, 255, 0.87)",
   },
   action: {
     active: "rgba(0, 0, 0, 0.54)",

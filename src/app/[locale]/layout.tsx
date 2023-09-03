@@ -1,7 +1,8 @@
 import { Grid } from "@mui/material";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import ResturentAdmin from "src/layouts/ResturentAdmin";
+import FigLayout from "src/layouts/FigmaproLayout";
+
 import ThemeContextProvider from "src/theme";
 
 export const metadata = {
@@ -29,7 +30,7 @@ export default function RootLayout({
     <html lang={locale}>
       <ThemeContextProvider>
         <body suppressHydrationWarning={true}>
-          <ResturentAdmin> {children}</ResturentAdmin>
+          <FigLayout> {children}</FigLayout>
         </body>
       </ThemeContextProvider>
     </html>

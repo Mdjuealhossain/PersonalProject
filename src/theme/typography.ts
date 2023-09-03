@@ -42,8 +42,8 @@ export default {
   h3: {
     ...roboto.style,
     fontWeight: 400,
-    fontSize: "3rem",
-    lineHeight: 1.167,
+    fontSize: "48px",
+    lineHeight: "normal",
     letterSpacing: "0em",
   },
   h4: {
@@ -70,8 +70,8 @@ export default {
   subtitle1: {
     ...roboto.style,
     fontWeight: 400,
-    fontSize: "1rem",
-    lineHeight: 1.75,
+    fontSize: "20px",
+    lineHeight: "normal",
     letterSpacing: "0.00938em",
   },
   subtitle2: {
@@ -91,9 +91,8 @@ export default {
   body2: {
     ...roboto.style,
     fontWeight: 400,
-    fontSize: "0.875rem",
-    lineHeight: 1.43,
-    letterSpacing: "0.01071em",
+    fontSize: "24px",
+    letterSpacing: "0.06071em",
   },
   button: {
     ...roboto.style,
@@ -112,9 +111,9 @@ export default {
   },
   overline: {
     ...roboto.style,
-    fontWeight: 400,
-    fontSize: "0.75rem",
-    lineHeight: 2.66,
+    fontWeight: 700,
+    fontSize: "26px",
+    lineHeight: "normal",
     letterSpacing: "0.08333em",
     textTransform: "uppercase",
   },
