@@ -47,46 +47,45 @@ const Sidbar = () => {
       justifyContent="space-between"
       sx={(theme) => ({
         bgcolor: theme.palette.info.dark,
-        minHeight: "100%",
+        height: "100%",
       })}
     >
       {/* main */}
+      <Typography position="absolute" top={50} left={125} variant="h4">
+        GD
+      </Typography>
       <Stack
-        sx={(theme) => ({
-          flexDirection: "column",
+        flexDirection="column"
+        sx={{
+          pt: 16,
           alignItems: "flex-start",
           gap: 2,
-          p: 2,
-        })}
+          height: "calc(100% - 48px)",
+        }}
       >
-        <Typography position="absolute" top={50} left={125} variant="h4">
-          GD
-        </Typography>
-
-        <Stack flexDirection="column" sx={{ pt: 16 }} gap={2}>
-          {navData.map((data) => {
-            const { id, title, icon } = data;
-            return (
-              <Box
-                display="flex"
-                key={id}
-                height={48}
-                px={2}
-                gap={2}
-                alignItems="center"
-                sx={(theme) => ({
-                  color: theme.palette.text.primary,
-                })}
-              >
-                <Box>{icon}</Box>
-                <Typography variant="h5">{title}</Typography>
-              </Box>
-            );
-          })}
-        </Stack>
+        {navData.map((data) => {
+          const { id, title, icon } = data;
+          return (
+            <Box
+              display="flex"
+              key={id}
+              height={48}
+              px={2}
+              gap={2}
+              justifyContent="center"
+              alignItems="center"
+              sx={(theme) => ({
+                color: theme.palette.text.primary,
+              })}
+            >
+              <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
+              <Typography variant="h5">{title}</Typography>
+            </Box>
+          );
+        })}
       </Stack>
       {/* //footer */}
-      <Stack height={48} justifyContent="center" alignItems="center">
+      <Stack minHeight={48} justifyContent="center" alignItems="center">
         <Typography
           variant="caption"
           sx={(theme) => ({

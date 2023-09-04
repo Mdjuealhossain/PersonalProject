@@ -14,6 +14,7 @@ export default function Home() {
     <Box
       py={4}
       px={8}
+      height="100%"
       flexDirection="row"
       display="flex"
       justifyContent="center"

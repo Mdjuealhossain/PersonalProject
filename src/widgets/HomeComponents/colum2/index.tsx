@@ -14,8 +14,7 @@ const Colum2 = () => {
       justifyContent="space-between"
       alignItems="center"
       flexDirection="column"
-      flex="1 0 0"
-      alignSelf="stretch"
+      height="100%"
     >
       <Stack>
         <Typography variant="h3">Want to hire me?</Typography>
@@ -46,7 +45,13 @@ const Colum2 = () => {
           <Typography variant="overline">EMAIL</Typography>
         </Stack>
       </Stack>
-      <Stack px={2} justifyContent="center" alignItems="center" gap={2}>
+      <Stack
+        px={2}
+        justifyContent="center"
+        alignItems="center"
+        gap={2}
+        flexDirection="row"
+      >
         <Box
           sx={(theme) => ({
             width: "171px",
@@ -63,7 +68,7 @@ const Colum2 = () => {
           })}
         ></Box>
       </Stack>
-      <Stack justifyContent="center" alignItems="center">
+      <Stack justifyContent="center" alignItems="center" flexDirection="row">
         <IconButton
           sx={(theme) => ({
             height: 62,
