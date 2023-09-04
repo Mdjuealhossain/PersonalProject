@@ -3,8 +3,9 @@ import React from "react";
 
 const Colum = () => {
   return (
-    <Grid container item spacing={1} xl={6} sx={{ py: 15, pr: 2 }}>
-      <Grid item flexDirection="column" xl={12}>
+    <Stack sx={{ py: 15, pr: 2 }}>
+      oiuegfdhdlofijbnlkdfjnmblkfgmbnl;fmghk;nlmdsligkjvdlfibpodfkjhbpo;;fkghpo[ktyhfokpo;'rfdygkjhp;ojfgijiorfdhjgujiortgjuihdfkjh']
+      {/* <Stack flexDirection="column">
         <Typography variant="h3">Hi, I'm </Typography>
         <Typography
           display="inline-block"
@@ -20,9 +21,9 @@ const Colum = () => {
         >
           Welcome to my page
         </Typography>
-      </Grid>
+      </Stack>
 
-      <Grid item xl={12}>
+      <Stack>
         <Stack flexDirection="column">
           <Stack flexDirection="row" alignItems="center">
             <Typography sx={{ display: "inline-block", pr: 1 }} variant="body2">
@@ -54,8 +55,8 @@ const Colum = () => {
             I love talking about the world, hobbies and especially code.
           </Typography>
         </Stack>
-      </Grid>
-    </Grid>
+      </Stack> */}
+    </Stack>
 
     // <---iughuh----
     // <Grid container>

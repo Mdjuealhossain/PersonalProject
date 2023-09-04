@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AppBar, Box, CardMedia, Stack, Typography } from "@mui/material";
+import { AppBar, Box, CardMedia, Grid, Stack, Typography } from "@mui/material";
 import FolderSharedRoundedIcon from "@mui/icons-material/FolderSharedRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import HomeRepairServiceSharpIcon from "@mui/icons-material/HomeRepairServiceSharp";
@@ -43,40 +43,50 @@ const navData = [
 
 const Sidbar = () => {
   return (
-    <AppBar color="inherit" position="static">
-      <Stack sx={{ p: 2, gap: 2 }}>
-        <Stack pb={32} gap="16px">
-          <Stack justifyContent="center" alignItems="center" height={110}>
-            <Typography variant="h4">SD</Typography>
-          </Stack>
+    <Stack
+      justifyContent="space-between"
+      sx={(theme) => ({
+        bgcolor: theme.palette.info.dark,
+        minHeight: "100%",
+      })}
+    >
+      {/* main */}
+      <Stack
+        sx={(theme) => ({
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: 2,
+          p: 2,
+        })}
+      >
+        <Typography position="absolute" top={50} left={125} variant="h4">
+          GD
+        </Typography>
+
+        <Stack flexDirection="column" sx={{ pt: 16 }} gap={2}>
           {navData.map((data) => {
             const { id, title, icon } = data;
             return (
-              <Stack
+              <Box
+                display="flex"
                 key={id}
                 height={48}
-                pr={2}
-                pl={2}
+                px={2}
                 gap={2}
-                flexDirection="row"
                 alignItems="center"
                 sx={(theme) => ({
                   color: theme.palette.text.primary,
                 })}
               >
-                <Stack>{icon}</Stack>
+                <Box>{icon}</Box>
                 <Typography variant="h5">{title}</Typography>
-              </Stack>
+              </Box>
             );
           })}
         </Stack>
       </Stack>
-      <Stack
-        component="footer"
-        height={48}
-        justifyContent="center"
-        alignItems="center"
-      >
+      {/* //footer */}
+      <Stack height={48} justifyContent="center" alignItems="center">
         <Typography
           variant="caption"
           sx={(theme) => ({
@@ -86,7 +96,7 @@ const Sidbar = () => {
           2023 © Stratis Dermanoutsos
         </Typography>
       </Stack>
-    </AppBar>
+    </Stack>
   );
 };
 

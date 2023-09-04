@@ -11,10 +11,12 @@ import Colum from "src/widgets/HomeComponents/colum1";
 
 export default function Home() {
   return (
-    <Grid container p="5px 64px 32px 64px" alignSelf="stretch">
-      <Colum />
+    <Box p="5px 64px 32px 64px" maxWidth="100wh">
+      dfkughdfoihjliofgjhokgfjokghpokpgkijhofgdihofkghojdsifghiisfrhguisfijihfdidfsjghjhsdghibjdifghidfgjkdijghidghjihjdifgujdifhugifdgujjhiujfgdihufgihuipujhiujfhipjhiojgyrg
+      hfsudihguiofsdhgiuhsfdiughuiosfdhguiohsrguofhousjdhgouijhsduojghoisdhfgoiuhsdfgoiujhdfsoiuhgoifsdhjgoiujhu
+      {/* <Colum />
 
-      <Colum2 />
-    </Grid>
+      <Colum2 /> */}
+    </Box>
   );
 }

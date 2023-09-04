@@ -9,7 +9,7 @@ const MuiAppBar: Components<Theme>["MuiAppBar"] = {
       left: 0,
       right: 1252,
     }),
-    colorInherit: ({ theme, ownerState }) => ({
+    colorPrimary: ({ theme, ownerState }) => ({
       background: theme.palette.info.dark,
     }),
   },
