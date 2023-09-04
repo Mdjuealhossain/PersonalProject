@@ -10,6 +10,7 @@ const Colum2 = () => {
   return (
     <Stack
       sx={{ py: 15 }}
+      display="flex"
       justifyContent="space-between"
       alignItems="center"
       flexDirection="column"

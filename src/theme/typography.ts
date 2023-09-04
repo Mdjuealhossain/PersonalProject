@@ -92,7 +92,7 @@ export default {
     ...roboto.style,
     fontWeight: 400,
     fontSize: "24px",
-    letterSpacing: "0.06071em",
+    letterSpacing: "0.00938em",
   },
   button: {
     ...roboto.style,

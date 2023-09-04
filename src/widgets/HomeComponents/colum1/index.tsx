@@ -3,13 +3,14 @@ import React from "react";
 
 const Colum = () => {
   return (
-    <Stack
+    <Grid
+      container
       sx={{ py: 15, pr: 2 }}
-      justifyContent="end"
-      direction="column"
+      justifyContent="space-between"
       height="100%"
+      flex=" 1 0 0"
     >
-      <Stack flexDirection="column">
+      <Stack flexDirection="column" pb={3.6} gap={1.25} alignItems="flex-start">
         <Box>
           <Typography variant="h3" display="inline">
             Hi, I'm{" "}
@@ -32,7 +33,13 @@ const Colum = () => {
         </Typography>
       </Stack>
 
-      <Stack>
+      <Stack
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="flex-start"
+        gap={2}
+        height="100%"
+      >
         <Stack flexDirection="column">
           <Stack flexDirection="row" alignItems="center">
             <Typography sx={{ display: "inline-block", pr: 1 }} variant="body2">
@@ -65,7 +72,7 @@ const Colum = () => {
           </Typography>
         </Stack>
       </Stack>
-    </Stack>
+    </Grid>
 
     // <---iughuh----
     // <Grid container>

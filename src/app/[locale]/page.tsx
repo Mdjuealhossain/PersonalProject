@@ -11,10 +11,18 @@ import Colum from "src/widgets/HomeComponents/colum1";
 
 export default function Home() {
   return (
-    <Box p="5px 64px 32px 64px" flexDirection="row" display="flex">
+    <Box
+      py={4}
+      px={8}
+      flexDirection="row"
+      display="flex"
+      justifyContent="center"
+      alignItems="flex-start"
+      gap={2}
+    >
       <Colum />
 
-      {/* <Colum2 /> */}
+      <Colum2 />
     </Box>
   );
 }
