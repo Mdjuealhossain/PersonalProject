@@ -8,10 +8,7 @@ import SubscriptionsRoundedIcon from "@mui/icons-material/SubscriptionsRounded";
 
 const Colum2 = () => {
   return (
-    <Grid
-      container
-      item
-      xl={6}
+    <Stack
       sx={{ py: 15 }}
       justifyContent="space-between"
       alignItems="center"
@@ -19,17 +16,10 @@ const Colum2 = () => {
       flex="1 0 0"
       alignSelf="stretch"
     >
-      <Grid item xl>
+      <Stack>
         <Typography variant="h3">Want to hire me?</Typography>
-      </Grid>
-      <Grid
-        item
-        container
-        gap={3}
-        xl
-        flexDirection="column"
-        alignItems="center"
-      >
+      </Stack>
+      <Stack flexDirection="column" alignItems="center">
         <Typography
           variant="subtitle1"
           sx={(theme) => ({
@@ -54,15 +44,8 @@ const Colum2 = () => {
           />
           <Typography variant="overline">EMAIL</Typography>
         </Stack>
-      </Grid>
-      <Grid
-        item
-        container
-        px={2}
-        justifyContent="center"
-        alignItems="center"
-        gap={2}
-      >
+      </Stack>
+      <Stack px={2} justifyContent="center" alignItems="center" gap={2}>
         <Box
           sx={(theme) => ({
             width: "171px",
@@ -78,14 +61,8 @@ const Colum2 = () => {
             bgcolor: theme.palette.text.secondary,
           })}
         ></Box>
-      </Grid>
-      <Grid
-        container
-        gap={1.25}
-        item
-        justifyContent="center"
-        alignItems="center"
-      >
+      </Stack>
+      <Stack justifyContent="center" alignItems="center">
         <IconButton
           sx={(theme) => ({
             height: 62,
@@ -138,8 +115,8 @@ const Colum2 = () => {
         >
           <SubscriptionsRoundedIcon sx={{ height: 30, width: 30 }} />
         </IconButton>
-      </Grid>
-    </Grid>
+      </Stack>
+    </Stack>
   );
 };
 

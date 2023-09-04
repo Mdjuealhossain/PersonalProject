@@ -10,15 +10,16 @@ const FigLayout: FC<FigLayoutProps> = ({ children }) => {
       flexDirection="row"
       sx={(theme) => ({
         color: theme.palette.common.white,
+        minHeight: "100%",
       })}
     >
-      <Box sx={{ width: 480 }}>
+      <Box width={280}>
         <Sidbar />
       </Box>
       <Stack
-        width="calc(100% -280px)"
         sx={(theme) => ({
           bgcolor: theme.palette.info.main,
+          width: "calc(100% - 280px)",
         })}
       >
         {children}

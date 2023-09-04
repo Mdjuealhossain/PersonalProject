@@ -3,16 +3,25 @@ import React from "react";
 
 const Colum = () => {
   return (
-    <Stack sx={{ py: 15, pr: 2 }}>
-      oiuegfdhdlofijbnlkdfjnmblkfgmbnl;fmghk;nlmdsligkjvdlfibpodfkjhbpo;;fkghpo[ktyhfokpo;'rfdygkjhp;ojfgijiorfdhjgujiortgjuihdfkjh']
-      {/* <Stack flexDirection="column">
-        <Typography variant="h3">Hi, I'm </Typography>
-        <Typography
-          display="inline-block"
-          sx={(theme) => ({ color: theme.palette.success.dark })}
-        >
-          Stratis
-        </Typography>
+    <Stack
+      sx={{ py: 15, pr: 2 }}
+      justifyContent="end"
+      direction="column"
+      height="100%"
+    >
+      <Stack flexDirection="column">
+        <Box>
+          <Typography variant="h3" display="inline">
+            Hi, I'm{" "}
+          </Typography>
+          <Typography
+            display="inline"
+            variant="h3"
+            sx={(theme) => ({ color: theme.palette.success.dark })}
+          >
+            Stratis
+          </Typography>
+        </Box>
         <Typography
           variant="h5"
           sx={(theme) => ({
@@ -55,7 +64,7 @@ const Colum = () => {
             I love talking about the world, hobbies and especially code.
           </Typography>
         </Stack>
-      </Stack> */}
+      </Stack>
     </Stack>
 
     // <---iughuh----
