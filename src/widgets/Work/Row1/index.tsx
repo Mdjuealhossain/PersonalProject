@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
@@ -6,10 +7,10 @@ import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRou
 import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 import SubscriptionsRoundedIcon from "@mui/icons-material/SubscriptionsRounded";
 
-const Colum2 = () => {
+const Row1 = () => {
   return (
     <Stack
-      sx={{ py: 15 }}
+      sx={{ py: 4 }}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
@@ -17,35 +18,33 @@ const Colum2 = () => {
       height="100%"
       flex="1 0 0"
     >
-      <Stack>
-        <Typography variant="h3">Want to hire me?</Typography>
-      </Stack>
-      <Stack flexDirection="column" alignItems="center">
-        <Typography
-          variant="subtitle1"
+      <Typography variant="h3">Want to hire me?</Typography>
+
+      <Typography
+        variant="subtitle1"
+        sx={(theme) => ({
+          color: theme.palette.text.primary,
+        })}
+      >
+        I strive to reply within an hour.
+      </Typography>
+      <Stack
+        flexDirection="row"
+        gap={1.25}
+        p={2}
+        alignItems="center"
+        height={62}
+      >
+        <MailIcon
           sx={(theme) => ({
-            color: theme.palette.text.primary,
+            height: 30,
+            width: 30,
+            color: theme.palette.success.dark,
           })}
-        >
-          I strive to reply within an hour.
-        </Typography>
-        <Stack
-          flexDirection="row"
-          gap={1.25}
-          p={2}
-          alignItems="center"
-          height={62}
-        >
-          <MailIcon
-            sx={(theme) => ({
-              height: 30,
-              width: 30,
-              color: theme.palette.success.dark,
-            })}
-          />
-          <Typography variant="overline">EMAIL</Typography>
-        </Stack>
+        />
+        <Typography variant="overline">EMAIL</Typography>
       </Stack>
+
       <Stack
         px={2}
         justifyContent="center"
@@ -127,4 +126,4 @@ const Colum2 = () => {
   );
 };
 
-export default Colum2;
+export default Row1;

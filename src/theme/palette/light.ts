@@ -22,7 +22,7 @@ export default {
   warning: {
     dark: "#e65100",
     main: "#ed6c02",
-    light: "#ff9800",
+    light: "#3C3C5B;",
     contrastText: "#fff",
   },
   info: {

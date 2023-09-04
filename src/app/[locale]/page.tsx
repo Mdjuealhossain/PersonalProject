@@ -12,17 +12,13 @@ import Colum from "src/widgets/HomeComponents/colum1";
 export default function Home() {
   return (
     <Box
-      py={4}
-      px={8}
       height="100%"
-      flexDirection="row"
       display="flex"
       justifyContent="center"
       alignItems="flex-start"
       gap={2}
     >
       <Colum />
-
       <Colum2 />
     </Box>
   );

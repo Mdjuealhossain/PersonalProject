@@ -17,8 +17,10 @@ const FigLayout: FC<FigLayoutProps> = ({ children }) => {
         <Sidbar />
       </Box>
       <Stack
+        py={4}
+        px={8}
         sx={(theme) => ({
-          bgcolor: theme.palette.info.main,
+          bgcolor: theme.palette.warning.light,
           width: "calc(100% - 280px)",
         })}
       >

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AppBar, Box, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import { AppBar, Box, Link, Grid, Stack, Typography } from "@mui/material";
 import FolderSharedRoundedIcon from "@mui/icons-material/FolderSharedRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import HomeRepairServiceSharpIcon from "@mui/icons-material/HomeRepairServiceSharp";
@@ -13,26 +13,31 @@ const navData = [
     id: 1,
     title: "Home",
     icon: <HomeRoundedIcon sx={{ fontSize: 30 }} />,
+    link: "/",
   },
   {
     id: 2,
     title: "About",
     icon: <FolderSharedRoundedIcon />,
+    link: "/about",
   },
   {
     id: 3,
     title: "Work",
     icon: <HomeRepairServiceSharpIcon />,
+    link: "/work",
   },
   {
     id: 4,
     title: "Blog",
     icon: <SmsIcon />,
+    link: "/blog",
   },
   {
     id: 5,
     title: "Notice",
     icon: <AssignmentLateIcon />,
+    link: "/notice",
   },
   {
     id: 6,
@@ -64,9 +69,10 @@ const Sidbar = () => {
         }}
       >
         {navData.map((data) => {
-          const { id, title, icon } = data;
+          const { id, title, icon, link } = data;
           return (
-            <Box
+            <Link
+              href={`${link}`}
               display="flex"
               key={id}
               height={48}
@@ -80,7 +86,7 @@ const Sidbar = () => {
             >
               <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
               <Typography variant="h5">{title}</Typography>
-            </Box>
+            </Link>
           );
         })}
       </Stack>
