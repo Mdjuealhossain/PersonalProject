@@ -10,7 +10,7 @@ const FigLayout: FC<FigLayoutProps> = ({ children }) => {
       flexDirection="row"
       sx={(theme) => ({
         color: theme.palette.common.white,
-        height: 832,
+        minHeight: "100%",
       })}
     >
       <Box width={280}>

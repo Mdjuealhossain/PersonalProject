@@ -42,7 +42,12 @@ const Row2 = () => {
                 bgcolor: theme.palette.info.main,
               })}
             >
-              <Typography variant="h5">Senior .NET Developer</Typography>
+              <Typography
+                variant="h5"
+                sx={(theme) => ({ color: theme.palette.success.dark })}
+              >
+                Junior .FONT Developer
+              </Typography>
               <Typography variant="caption" sx={{ fontSize: 16 }}>
                 MAY 2023 - PRESENT (3 months)
               </Typography>
@@ -69,7 +74,6 @@ const Row2 = () => {
           <Typography variant="h4" display="inline">
             Freelancer
           </Typography>
-
           <Typography display="inline">(9 mos)</Typography>
         </Box>
       </Stack>
