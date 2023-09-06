@@ -34,10 +34,10 @@ export default {
   },
   h2: {
     ...roboto.style,
-    fontWeight: 300,
-    fontSize: "3.75rem",
-    lineHeight: 1.2,
-    letterSpacing: "-0.00833em",
+    fontWeight: 700,
+    fontSize: "24px",
+    lineHeight: "normal",
+    textTransform: "uppercase",
   },
   h3: {
     ...roboto.style,

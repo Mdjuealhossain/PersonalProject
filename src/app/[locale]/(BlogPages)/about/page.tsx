@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { Stack } from "@mui/material";
-import Colum1 from "src/widgets/About/Colum1";
 import Colum2 from "src/widgets/About/Colum2";
+import { Colum1 } from "src/widgets/About/Colum1";
 
 const About = () => {
   return (

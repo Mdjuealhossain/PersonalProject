@@ -43,6 +43,7 @@ const navData = [
     id: 6,
     title: "About this page",
     icon: <InfoIcon />,
+    link: "aboutthispage",
   },
 ];
 

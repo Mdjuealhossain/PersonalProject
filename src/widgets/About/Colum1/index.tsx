@@ -7,7 +7,7 @@ import StackedLineChartIcon from "@mui/icons-material/StackedLineChart";
 import SportsMmaIcon from "@mui/icons-material/SportsMma";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 
-const Icon = ({ children }: any) => {
+const IconWraper = ({ children }: any) => {
   return (
     <IconButton
       sx={(theme) => ({
@@ -49,27 +49,27 @@ const Colum1 = () => {
         flexWrap="wrap"
         alignContent="center"
       >
-        <Icon>
+        <IconWraper>
           <GitHubIcon sx={{ height: 30, width: 30 }} />
-        </Icon>
-        <Icon>
+        </IconWraper>
+        <IconWraper>
           <AddBusinessIcon sx={{ height: 30, width: 30 }} />
-        </Icon>
-        <Icon>
+        </IconWraper>
+        <IconWraper>
           <TwitterIcon sx={{ height: 30, width: 30 }} />
-        </Icon>
-        <Icon>
+        </IconWraper>
+        <IconWraper>
           <StackedLineChartIcon sx={{ height: 30, width: 30 }} />
-        </Icon>
-        <Icon>
+        </IconWraper>
+        <IconWraper>
           <SportsMmaIcon sx={{ height: 30, width: 30 }} />
-        </Icon>
-        <Icon>
+        </IconWraper>
+        <IconWraper>
           <SportsBasketballIcon sx={{ height: 30, width: 30 }} />
-        </Icon>
+        </IconWraper>
       </Stack>
     </Stack>
   );
 };
 
-export default Colum1;
+export { Colum1, IconWraper };
