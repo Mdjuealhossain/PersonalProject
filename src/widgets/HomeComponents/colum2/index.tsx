@@ -9,7 +9,7 @@ import SubscriptionsRoundedIcon from "@mui/icons-material/SubscriptionsRounded";
 const Colum2 = () => {
   return (
     <Stack
-      sx={{ py: 15 }}
+      sx={{ py: 15, gap: { xs: 8, lg: 0 } }}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
@@ -63,13 +63,19 @@ const Colum2 = () => {
         <Typography variant="h5">or</Typography>
         <Box
           sx={(theme) => ({
+            flexWrap: "wrap",
             width: "171px",
             height: "2px",
             bgcolor: theme.palette.text.secondary,
           })}
         ></Box>
       </Stack>
-      <Stack justifyContent="center" alignItems="center" flexDirection="row">
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="row"
+        flexWrap="wrap"
+      >
         <IconButton
           sx={(theme) => ({
             height: 62,

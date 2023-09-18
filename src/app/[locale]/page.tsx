@@ -17,6 +17,7 @@ export default function Home() {
       justifyContent="center"
       alignItems="flex-start"
       gap={2}
+      sx={{ flexDirection: { xs: "column", lg: "row" } }}
     >
       <Colum />
       <Colum2 />

@@ -61,7 +61,7 @@ const Sidbar = () => {
         position="absolute"
         sx={{
           top: { xs: 45, lg: 50 },
-          left: { xs: 18, sm: 25, md: 140, lg: 150 },
+          left: { xs: 18, sm: 60, md: 140, lg: 150 },
         }}
         variant="h4"
       >
@@ -96,7 +96,7 @@ const Sidbar = () => {
               <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
               <Typography
                 variant="h5"
-                sx={{ display: { xs: "none", md: "inline" } }}
+                sx={{ display: { xs: "none", sm: "inline" } }}
               >
                 {title}
               </Typography>

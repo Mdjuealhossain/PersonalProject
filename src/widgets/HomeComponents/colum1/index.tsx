@@ -4,7 +4,7 @@ import React from "react";
 const Colum = () => {
   return (
     <Stack
-      sx={{ py: 15, pr: 2 }}
+      sx={{ py: 15, pr: 2, gap: { xs: 2, lg: 0 } }}
       justifyContent="space-between"
       height="100%"
       flex="1 0 0"
