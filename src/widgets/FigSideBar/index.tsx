@@ -57,12 +57,20 @@ const Sidbar = () => {
       })}
     >
       {/* main */}
-      <Typography position="absolute" top={50} left={125} variant="h4">
+      <Typography
+        position="absolute"
+        sx={{
+          top: { xs: 45, lg: 50 },
+          left: { xs: 18, sm: 25, md: 140, lg: 150 },
+        }}
+        variant="h4"
+      >
         GD
       </Typography>
       <Stack
         flexDirection="column"
         sx={{
+          pr: { xs: 1, md: 0 },
           pt: 16,
           alignItems: "flex-start",
           gap: 2,
@@ -86,7 +94,12 @@ const Sidbar = () => {
               })}
             >
               <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
-              <Typography variant="h5">{title}</Typography>
+              <Typography
+                variant="h5"
+                sx={{ display: { xs: "none", md: "inline" } }}
+              >
+                {title}
+              </Typography>
             </Link>
           );
         })}
