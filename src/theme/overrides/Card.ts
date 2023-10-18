@@ -2,7 +2,12 @@ import { Theme, Components } from "@mui/material/styles";
 
 const MuiCard: Components<Theme>["MuiCard"] = {
   styleOverrides: {
-    root: ({ theme, ownerState }) => ({}),
+    root: ({ theme, ownerState }) => ({
+      ":hover": {
+        transform: "translateY(-1px)",
+        boxShadow: theme.shadows[1],
+      },
+    }),
   },
 };
 

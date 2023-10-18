@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { FC } from "react";
 import { AppBar, Box, Link, Grid, Stack, Typography } from "@mui/material";
 import FolderSharedRoundedIcon from "@mui/icons-material/FolderSharedRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
@@ -7,6 +7,8 @@ import HomeRepairServiceSharpIcon from "@mui/icons-material/HomeRepairServiceSha
 import SmsIcon from "@mui/icons-material/Sms";
 import AssignmentLateIcon from "@mui/icons-material/AssignmentLate";
 import InfoIcon from "@mui/icons-material/Info";
+
+import { SidbarProps } from "./Types";
 
 const navData = [
   {
@@ -47,10 +49,10 @@ const navData = [
   },
 ];
 
-const Sidbar = () => {
+const Sidbar: FC<SidbarProps> = () => {
   return (
-    <Stack
-      justifyContent="space-between"
+    <Grid
+      container
       sx={(theme) => ({
         bgcolor: theme.palette.info.dark,
         height: "100%",
@@ -67,45 +69,45 @@ const Sidbar = () => {
       >
         GD
       </Typography>
-      <Stack
-        flexDirection="column"
+      <Grid
+        item
+        container
+        rowSpacing={2}
+        xs={12}
         sx={{
           pr: { xs: 1, md: 0 },
           pt: 16,
-          alignItems: "flex-start",
-          gap: 2,
-          height: "calc(100% - 48px)",
         }}
       >
         {navData.map((data) => {
           const { id, title, icon, link } = data;
           return (
-            <Link
-              href={`${link}`}
-              display="flex"
-              key={id}
-              height={48}
-              px={2}
-              gap={2}
-              justifyContent="center"
-              alignItems="center"
-              sx={(theme) => ({
-                color: theme.palette.text.primary,
-              })}
-            >
-              <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
-              <Typography
-                variant="h5"
-                sx={{ display: { xs: "none", md: "inline" } }}
+            <Grid key={id} item xs={12}>
+              <Stack
+                height={48}
+                px={2}
+                gap={2}
+                flexDirection="row"
+                justifyContent="center"
+                alignItems="center"
+                sx={(theme) => ({
+                  color: theme.palette.text.primary,
+                })}
               >
-                {title}
-              </Typography>
-            </Link>
+                <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
+                <Typography
+                  variant="h5"
+                  sx={{ display: { xs: "none", md: "inline" } }}
+                >
+                  {title}
+                </Typography>
+              </Stack>
+            </Grid>
           );
         })}
-      </Stack>
+      </Grid>
       {/* //footer */}
-      <Stack minHeight={48} justifyContent="center" alignItems="center">
+      <Grid item xs={12}>
         <Typography
           variant="caption"
           sx={(theme) => ({
@@ -114,8 +116,8 @@ const Sidbar = () => {
         >
           2023 © Stratis Dermanoutsos
         </Typography>
-      </Stack>
-    </Stack>
+      </Grid>
+    </Grid>
   );
 };
 

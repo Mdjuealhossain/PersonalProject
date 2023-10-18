@@ -10,7 +10,13 @@ declare module "@mui/material/Button" {
 
 const MuiButton: Components<Theme>["MuiButton"] = {
   styleOverrides: {
-    root: ({ theme, ownerState }) => ({}),
+    root: ({ theme, ownerState }) => ({
+      padding: "4px 10px",
+      borderRadius: 5,
+    }),
+    sizeLarge: ({ theme, ownerState }) => ({
+      fontSize: 20,
+    }),
   },
   variants: [
     {
