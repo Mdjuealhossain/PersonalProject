@@ -3,12 +3,7 @@ import React from "react";
 
 const Colum = () => {
   return (
-    <Stack
-      sx={{ py: 15, pr: 2 }}
-      justifyContent="space-between"
-      height="100%"
-      flex="1 0 0"
-    >
+    <Stack sx={{ py: 15, pr: 2 }} justifyContent="space-between" height="100%">
       <Stack flexDirection="column" pb={3.6} gap={1.25} alignItems="flex-start">
         <Box>
           <Typography variant="h3" display="inline">
@@ -38,7 +33,6 @@ const Colum = () => {
         alignItems="flex-start"
         gap={2}
         height="100%"
-        flex="1 0 0"
       >
         <Stack flexDirection="column">
           <Stack flexDirection="row" alignItems="center">

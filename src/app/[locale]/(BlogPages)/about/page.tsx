@@ -11,10 +11,10 @@ const About = () => {
       gap={2}
       alignItems="flex-start"
       direction="row"
+      height="100%"
     >
       <Colum1 />
       <Colum2 />
-      <Stack></Stack>
     </Stack>
   );
 };

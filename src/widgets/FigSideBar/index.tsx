@@ -51,8 +51,8 @@ const navData = [
 
 const Sidbar: FC<SidbarProps> = () => {
   return (
-    <Grid
-      container
+    <Stack
+      justifyContent="space-between"
       sx={(theme) => ({
         bgcolor: theme.palette.info.dark,
         height: "100%",
@@ -69,45 +69,45 @@ const Sidbar: FC<SidbarProps> = () => {
       >
         GD
       </Typography>
-      <Grid
-        item
-        container
-        rowSpacing={2}
-        xs={12}
+      <Stack
+        flexDirection="column"
         sx={{
           pr: { xs: 1, md: 0 },
           pt: 16,
+          alignItems: "flex-start",
+          gap: 2,
+          height: "calc(100% - 48px)",
         }}
       >
         {navData.map((data) => {
           const { id, title, icon, link } = data;
           return (
-            <Grid key={id} item xs={12}>
-              <Stack
-                height={48}
-                px={2}
-                gap={2}
-                flexDirection="row"
-                justifyContent="center"
-                alignItems="center"
-                sx={(theme) => ({
-                  color: theme.palette.text.primary,
-                })}
+            <Link
+              href={`${link}`}
+              display="flex"
+              key={id}
+              height={48}
+              px={2}
+              gap={2}
+              justifyContent="center"
+              alignItems="center"
+              sx={(theme) => ({
+                color: theme.palette.text.primary,
+              })}
+            >
+              <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
+              <Typography
+                variant="h5"
+                sx={{ display: { xs: "none", md: "inline" } }}
               >
-                <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
-                <Typography
-                  variant="h5"
-                  sx={{ display: { xs: "none", md: "inline" } }}
-                >
-                  {title}
-                </Typography>
-              </Stack>
-            </Grid>
+                {title}
+              </Typography>
+            </Link>
           );
         })}
-      </Grid>
+      </Stack>
       {/* //footer */}
-      <Grid item xs={12}>
+      <Stack minHeight={48} justifyContent="center" alignItems="center">
         <Typography
           variant="caption"
           sx={(theme) => ({
@@ -116,8 +116,8 @@ const Sidbar: FC<SidbarProps> = () => {
         >
           2023 © Stratis Dermanoutsos
         </Typography>
-      </Grid>
-    </Grid>
+      </Stack>
+    </Stack>
   );
 };
 

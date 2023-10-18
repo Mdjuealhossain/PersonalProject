@@ -6,18 +6,17 @@ import Sidbar from "src/widgets/FigSideBar";
 
 const FigLayout: FC<FigLayoutProps> = ({ children }) => {
   return (
-    <Stack flexDirection="row" height="100%">
-      <Grid container maxWidth={380}>
-        <Grid item xs={12}>
+    <Stack height="100%">
+      <Grid container>
+        <Grid item xs={3} maxWidth={380} height="100%">
           <Sidbar />
         </Grid>
-      </Grid>
-      <Grid container>
+
         <Grid
-          xs={12}
+          xs={9}
           item
           py={4}
-          px={8}
+          px={{ lg: 8, xs: 1 }}
           sx={(theme) => ({
             bgcolor: theme.palette.warning.light,
             maxWidth: "calc(100% - 380px)",
