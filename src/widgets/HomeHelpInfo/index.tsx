@@ -8,9 +8,9 @@ import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRou
 import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 import SubscriptionsRoundedIcon from "@mui/icons-material/SubscriptionsRounded";
 
-import { Colum2Props } from "./Types";
+import { HomeHelpInfoProps } from "./Types";
 
-const Colum2: FC<Colum2Props> = () => {
+const HomeHelpInfo: FC<HomeHelpInfoProps> = () => {
   return (
     <Stack
       py={{ xs: 3, md: 5, lg: 15 }}
@@ -124,4 +124,4 @@ const Colum2: FC<Colum2Props> = () => {
   );
 };
 
-export default Colum2;
+export default HomeHelpInfo;

@@ -4,7 +4,7 @@ import React, { FC } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { IconWraper } from "src/widgets/About/Colum1";
+import { IconWraper } from "src/widgets/AboutDetails";
 
 interface Props {
   Icon: JSX.Element;
