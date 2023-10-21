@@ -9,8 +9,8 @@ const Work = () => {
     <Box>
       <Container>
         <Stack height="100%" sx={{ py: 8, px: 4 }}>
-          <WorkHelpInfo></WorkHelpInfo>
-          <WorkDetails></WorkDetails>
+          <WorkHelpInfo />
+          <WorkDetails />
         </Stack>
       </Container>
     </Box>

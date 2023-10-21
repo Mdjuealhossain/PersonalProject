@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography, Link } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
@@ -12,19 +12,17 @@ const WorkHelpInfo: FC<WorkHelpInfoProps> = () => {
   return (
     <Stack
       sx={{ py: 4 }}
-      display="flex"
       justifyContent="space-between"
       alignItems="center"
       flexDirection="column"
       height="100%"
-      flex="1 0 0"
     >
       <Typography variant="h3">Want to hire me?</Typography>
 
       <Typography
         variant="subtitle1"
         sx={(theme) => ({
-          color: theme.palette.text.primary,
+          color: theme.palette.text.secondary,
         })}
       >
         I strive to reply within an hour.
@@ -40,7 +38,7 @@ const WorkHelpInfo: FC<WorkHelpInfoProps> = () => {
           sx={(theme) => ({
             height: 30,
             width: 30,
-            color: theme.palette.success.dark,
+            color: theme.palette.success.light,
           })}
         />
         <Typography variant="overline">EMAIL</Typography>
@@ -55,72 +53,63 @@ const WorkHelpInfo: FC<WorkHelpInfoProps> = () => {
       >
         <Box
           sx={(theme) => ({
-            width: "171px",
-            height: "2px",
-            bgcolor: theme.palette.text.secondary,
+            bgcolor: theme.palette.text.disabled,
           })}
+          height={{ xs: 2 }}
+          width={{ xs: 171, lg: 120, xl: 171 }}
         ></Box>
-        <Typography variant="h5">or</Typography>
+        <Typography variant="h5" color="text.secondary">
+          or
+        </Typography>
         <Box
+          height={{ xs: 2 }}
+          width={{ xs: 171, lg: 120, xl: 171 }}
           sx={(theme) => ({
-            width: "171px",
-            height: "2px",
-            bgcolor: theme.palette.text.secondary,
+            bgcolor: theme.palette.text.disabled,
           })}
         ></Box>
       </Stack>
-      <Stack justifyContent="center" alignItems="center" flexDirection="row">
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="row"
+        gap={2}
+      >
         <IconButton
+          component={Link}
+          href="#"
           sx={(theme) => ({
-            height: 62,
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            borderRadius: 16,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <FacebookRoundedIcon sx={{ height: 30, width: 30 }} />
+          <FacebookRoundedIcon sx={{ height: 40, width: 40 }} />
         </IconButton>
         <IconButton
+          component={Link}
+          href="#"
           sx={(theme) => ({
-            height: 62,
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            borderRadius: 16,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <AddCircleOutlineRoundedIcon sx={{ height: 30, width: 30 }} />
+          <AddCircleOutlineRoundedIcon sx={{ height: 40, width: 40 }} />
         </IconButton>
         <IconButton
+          component={Link}
+          href="#"
           sx={(theme) => ({
-            height: 62,
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            borderRadius: 16,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <CloudUploadRoundedIcon sx={{ height: 30, width: 30 }} />
+          <CloudUploadRoundedIcon sx={{ height: 40, width: 40 }} />
         </IconButton>
         <IconButton
+          component={Link}
+          href="#"
           sx={(theme) => ({
-            height: 62,
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            borderRadius: 16,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <SubscriptionsRoundedIcon sx={{ height: 30, width: 30 }} />
+          <SubscriptionsRoundedIcon sx={{ height: 40, width: 40 }} />
         </IconButton>
       </Stack>
     </Stack>

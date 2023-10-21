@@ -11,7 +11,6 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
       alignItems="flex-start"
       gap={1.25}
       height="100%"
-      flex="1 0 0"
     >
       <Typography variant="h3">About me</Typography>
       <Stack

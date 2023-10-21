@@ -36,15 +36,15 @@ const navData = [
   },
   {
     id: 5,
-    title: "Notice",
+    title: "Resume",
     icon: <AssignmentLateIcon />,
-    link: "/notice",
+    link: "/resume",
   },
   {
     id: 6,
     title: "About this page",
     icon: <InfoIcon />,
-    link: "aboutthispage",
+    link: "/aboutthispage",
   },
 ];
 
