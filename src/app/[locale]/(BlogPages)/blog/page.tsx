@@ -1,17 +1,17 @@
 "use client";
 import { Box, Container, Stack } from "@mui/material";
 import React from "react";
-import BlogCard from "src/widgets/Blog/BlogCard";
 
-import BlogHeader from "src/widgets/Blog/BlogHeader";
+import BlogBanner from "src/widgets/BlogBanner";
+import BlogCards from "src/widgets/BlogCards";
 
 const Blog = () => {
   return (
     <Box>
       <Container>
         <Stack gap={10}>
-          <BlogHeader />
-          <BlogCard />
+          <BlogBanner />
+          <BlogCards />
         </Stack>
       </Container>
     </Box>

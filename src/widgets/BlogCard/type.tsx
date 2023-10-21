@@ -1,4 +1,4 @@
-export interface CardProps {
+export interface BlogCardProps {
   title: string;
   des: string;
   img: string;

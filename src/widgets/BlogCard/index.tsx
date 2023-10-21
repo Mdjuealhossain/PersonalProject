@@ -1,17 +1,16 @@
+import { FC } from "react";
 import {
-  CardHeader,
   Card,
   CardContent,
-  CardActions,
   Typography,
   CardMedia,
   Box,
   Stack,
 } from "@mui/material";
-import React, { FC } from "react";
-import { CardProps } from "./type";
 
-const Cards: FC<CardProps> = ({ title, des, img, alt }) => {
+import { BlogCardProps } from "./type";
+
+const BlogCard: FC<BlogCardProps> = ({ title, des, img, alt }) => {
   return (
     <Card
       variant="outlined"
@@ -43,4 +42,4 @@ const Cards: FC<CardProps> = ({ title, des, img, alt }) => {
   );
 };
 
-export default Cards;
+export default BlogCard;
