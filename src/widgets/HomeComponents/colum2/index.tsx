@@ -1,12 +1,16 @@
-import React from "react";
-import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
+
+import { FC } from "react";
+
 import MailIcon from "@mui/icons-material/Mail";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 import SubscriptionsRoundedIcon from "@mui/icons-material/SubscriptionsRounded";
 
-const Colum2 = () => {
+import { Colum2Props } from "./Types";
+
+const Colum2: FC<Colum2Props> = () => {
   return (
     <Stack
       py={{ xs: 3, md: 5, lg: 15 }}

@@ -2,24 +2,13 @@ import { Theme, Components } from "@mui/material/styles";
 
 const MuiAppBar: Components<Theme>["MuiAppBar"] = {
   styleOverrides: {
-    root: ({ theme, ownerState }) => ({
-      width: "auto",
-    }),
-    positionFixed: ({ theme, ownerState }) => ({
-      left: 0,
-      right: 1252,
-    }),
-    colorPrimary: ({ theme, ownerState }) => ({
-      background: theme.palette.info.dark,
-    }),
+    root: ({ theme, ownerState }) => ({}),
   },
 };
 
 const MuiToolbar: Components<Theme>["MuiToolbar"] = {
   styleOverrides: {
-    root: ({ theme, ownerState }) => ({
-      width: "auto",
-    }),
+    root: ({ theme, ownerState }) => ({}),
   },
 };
 
