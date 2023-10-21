@@ -12,7 +12,7 @@ export default function Home() {
           <Grid item xs={12} md={6}>
             <HomeDetails />
           </Grid>
-          <Grid xs={12} md={6}>
+          <Grid item xs={12} md={6}>
             <HomeHelpInfo />
           </Grid>
         </Grid>

@@ -13,7 +13,7 @@ const navData = [
   {
     id: 1,
     title: "Home",
-    icon: <HomeRoundedIcon sx={{ fontSize: 30 }} />,
+    icon: <HomeRoundedIcon sx={{ fontSize: 30 }} color="action" />,
     link: "/",
   },
   {

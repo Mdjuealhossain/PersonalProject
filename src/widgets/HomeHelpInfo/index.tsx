@@ -1,4 +1,4 @@
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Link, Stack, Typography } from "@mui/material";
 
 import { FC } from "react";
 
@@ -20,20 +20,11 @@ const HomeHelpInfo: FC<HomeHelpInfoProps> = () => {
     >
       <Typography variant="h3">Want to hire me?</Typography>
       <Stack flexDirection="column" alignItems="center">
-        <Typography
-          variant="subtitle1"
-          sx={(theme) => ({
-            color: theme.palette.text.primary,
-          })}
-        >
+        <Typography variant="subtitle1" color="text.secondary">
           I strive to reply within an hour.
         </Typography>
         <Stack flexDirection="row" gap={1.5} p={2} alignItems="center">
-          <IconButton
-            sx={(theme) => ({
-              color: theme.palette.success.dark,
-            })}
-          >
+          <IconButton color="success">
             <MailIcon />
           </IconButton>
           <Typography variant="overline">EMAIL</Typography>
@@ -48,17 +39,19 @@ const HomeHelpInfo: FC<HomeHelpInfoProps> = () => {
       >
         <Box
           sx={(theme) => ({
-            bgcolor: theme.palette.text.secondary,
+            bgcolor: theme.palette.text.disabled,
           })}
           height={{ xs: 2 }}
           width={{ xs: 171, lg: 120, xl: 171 }}
         ></Box>
-        <Typography variant="h5">or</Typography>
+        <Typography variant="h5" color="text.secondary">
+          or
+        </Typography>
         <Box
           height={{ xs: 2 }}
           width={{ xs: 171, lg: 120, xl: 171 }}
           sx={(theme) => ({
-            bgcolor: theme.palette.text.secondary,
+            bgcolor: theme.palette.text.disabled,
           })}
         ></Box>
       </Stack>
@@ -67,57 +60,43 @@ const HomeHelpInfo: FC<HomeHelpInfoProps> = () => {
         alignItems="center"
         flexDirection="row"
         flexWrap="wrap"
-        gap={1}
+        gap={0.5}
       >
         <IconButton
+          component={Link}
+          href="https://www.facebook.com/petedilam.ridoydani"
           sx={(theme) => ({
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <FacebookRoundedIcon />
+          <FacebookRoundedIcon color="info" sx={{ fontSize: 40 }} />
         </IconButton>
         <IconButton
+          component={Link}
+          href="#"
           sx={(theme) => ({
-            height: 62,
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            borderRadius: 16,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <AddCircleOutlineRoundedIcon />
+          <AddCircleOutlineRoundedIcon color="info" sx={{ fontSize: 40 }} />
         </IconButton>
         <IconButton
+          component={Link}
+          href="#"
           sx={(theme) => ({
-            height: 62,
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            borderRadius: 16,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <CloudUploadRoundedIcon />
+          <CloudUploadRoundedIcon color="info" sx={{ fontSize: 40 }} />
         </IconButton>
         <IconButton
+          component={Link}
+          href="https://www.youtube.com/"
           sx={(theme) => ({
-            height: 62,
-            p: 2,
-            alignItems: "center",
-            gap: 1.25,
-            borderRadius: 16,
-            bgcolor: theme.palette.info.main,
-            color: theme.palette.text.disabled,
+            boxShadow: 25,
           })}
         >
-          <SubscriptionsRoundedIcon />
+          <SubscriptionsRoundedIcon color="info" sx={{ fontSize: 40 }} />
         </IconButton>
       </Stack>
     </Stack>
