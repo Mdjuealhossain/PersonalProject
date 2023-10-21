@@ -1,3 +1,5 @@
 export interface AboutHelpInfoProps {}
 
-export interface IconWraperPropsProps {}
+export interface IconWraperPropsProps {
+  children: React.ReactNode;
+}
