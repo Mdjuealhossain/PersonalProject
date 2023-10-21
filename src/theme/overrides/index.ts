@@ -32,8 +32,10 @@ import Pagination from "./Pagination";
 import BottomNavigation from "./BottomNavigation";
 import Menu from "./Menu";
 import ToggleButton from "./ToggleButton";
+import Paper from "./Paper";
 
 export default Object.assign(
+  Paper,
   Button,
   Card,
   TextField,

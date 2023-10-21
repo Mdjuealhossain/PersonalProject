@@ -26,9 +26,9 @@ export default {
   fontWeightMedium: 500,
   fontWeightBold: 700,
   h1: {
-    ...roboto.style,
-    fontWeight: 300,
-    fontSize: "6rem",
+    fontFamily: "cursive",
+    fontWeight: 600,
+    fontSize: "3.5rem",
     lineHeight: 1.167,
     letterSpacing: "-0.01562em",
   },

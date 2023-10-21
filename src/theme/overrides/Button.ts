@@ -11,6 +11,7 @@ declare module "@mui/material/Button" {
 const MuiButton: Components<Theme>["MuiButton"] = {
   styleOverrides: {
     root: ({ theme, ownerState }) => ({}),
+    sizeLarge: ({ theme, ownerState }) => ({}),
   },
   variants: [
     {
