@@ -41,21 +41,21 @@ export default {
   },
   h3: {
     ...roboto.style,
-    fontWeight: 400,
+    fontWeight: 500,
     fontSize: "48px",
     lineHeight: "normal",
     letterSpacing: "0em",
   },
   h4: {
     ...roboto.style,
-    fontWeight: 400,
+    fontWeight: 500,
     fontSize: "2.125rem",
     lineHeight: 1.235,
     letterSpacing: "0.00735em",
   },
   h5: {
     ...roboto.style,
-    fontWeight: 400,
+    fontWeight: 500,
     fontSize: 24,
     lineHeight: 1.334,
     letterSpacing: "0em",
@@ -69,7 +69,7 @@ export default {
   },
   subtitle1: {
     ...roboto.style,
-    fontWeight: 400,
+    fontWeight: 500,
     fontSize: "20px",
     lineHeight: "normal",
     letterSpacing: "0.00938em",

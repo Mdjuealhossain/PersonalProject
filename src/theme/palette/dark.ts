@@ -27,15 +27,15 @@ export default {
   },
   info: {
     dark: "#0288d1",
-    main: "#29b6f6",
-    light: "#4fc3f7",
+    main: "#04f",
+    light: "rgba(255,255,255,.1)",
     contrastText: "rgba(0, 0, 0, 0.87)",
   },
   success: {
-    dark: "#388e3c",
-    main: "#66bb6a",
-    light: "#81c784",
-    contrastText: "rgba(0, 0, 0, 0.87)",
+    dark: "#1b5e20",
+    main: "#2e7d32",
+    light: "#4caf50",
+    contrastText: "#fff",
   },
   grey: {
     50: "#fafafa",
@@ -81,7 +81,7 @@ export default {
     white: "#fff",
   },
   shadows: {
-    transparentOne: "rgba(0,0,0,0.2)",
+    transparentOne: "rgba(0,0,0,0.5)",
     transparentTwo: "rgba(0,0,0,0.14)",
     transparentThree: "rgba(0,0,0,0.12)",
   },

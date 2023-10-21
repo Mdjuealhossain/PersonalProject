@@ -22,18 +22,18 @@ export default {
   warning: {
     dark: "#e65100",
     main: "#ed6c02",
-    light: "#3C3C5B;",
+    light: "#ff9800",
     contrastText: "#fff",
   },
   info: {
-    dark: "#2E2E47",
-    main: "#464567",
-    light: "#605F8E",
-    contrastText: "#ffffff",
+    dark: "#01579b",
+    main: "#00f",
+    light: "rgba(0,0,255,.2)",
+    contrastText: "#fff",
   },
   success: {
-    dark: "rgba(29, 255, 158, 1)",
-    main: "#2e7d32",
+    dark: "#1b5e20",
+    main: "#2e7d55",
     light: "#4caf50",
     contrastText: "#fff",
   },
@@ -54,9 +54,9 @@ export default {
     A700: "#616161",
   },
   text: {
-    primary: "rgba(255, 255, 255, 0.67)",
-    secondary: "rgba(255, 255, 255, 0.32)",
-    disabled: "rgba(255, 255, 255, 0.87)",
+    primary: "rgba(0, 0, 0, 0.77)",
+    secondary: "rgba(0, 0, 0, 0.6)",
+    disabled: "rgba(0, 0, 0, 0.38)",
   },
   action: {
     active: "rgba(0, 0, 0, 0.54)",
