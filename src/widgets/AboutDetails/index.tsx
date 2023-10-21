@@ -22,7 +22,7 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
       >
         <Stack flexDirection="row" alignItems="center">
           <Box>
-            <Typography variant="h6" display="inline-block" pr={1}>
+            <Typography variant="body2" display="inline-block" pr={1}>
               I’m a{" "}
             </Typography>
             <Typography
@@ -30,30 +30,29 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
               variant="h6"
               fontWeight={700}
               sx={(theme) => ({
-                color: theme.palette.success.dark,
+                color: theme.palette.success.main,
               })}
             >
               Senior Software Developer
             </Typography>
-            <Typography variant="h6">
-              {" "}
+            <Typography variant="body2">
               with an addiction to clean and efficient code.
             </Typography>
           </Box>
         </Stack>
-        <Typography variant="h6">
+        <Typography variant="body2">
           I started writing code when I was 15 years old as a hobby and it soon
           turned into my main profession.
         </Typography>
-        <Typography variant="h6">
+        <Typography variant="body2">
           When I’m not working, I’m most likely enjoying a cup of coffee. ...or
           two.
         </Typography>
+        <Typography variant="body2">
+          Feel free to email me for business matters or anything else, even
+          small talk.
+        </Typography>
       </Stack>
-      <Typography variant="h6">
-        Feel free to email me for business matters or anything else, even small
-        talk.
-      </Typography>
     </Stack>
   );
 };

@@ -37,10 +37,7 @@ const MuiCardHeader: Components<Theme>["MuiCardHeader"] = {
 
 const MuiCardMedia: Components<Theme>["MuiCardMedia"] = {
   styleOverrides: {
-    root: ({ theme, ownerState }) => ({
-      borderRadius: 16,
-      border: `8px solid ${theme.palette.info.main}`,
-    }),
+    root: ({ theme, ownerState }) => ({}),
   },
 };
 
