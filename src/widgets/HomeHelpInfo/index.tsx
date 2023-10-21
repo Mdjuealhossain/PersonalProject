@@ -1,50 +1,44 @@
-"use client";
-import React from "react";
-import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
+
+import { FC } from "react";
+
 import MailIcon from "@mui/icons-material/Mail";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 import SubscriptionsRoundedIcon from "@mui/icons-material/SubscriptionsRounded";
 
-const Row1 = () => {
+import { HomeHelpInfoProps } from "./Types";
+
+const HomeHelpInfo: FC<HomeHelpInfoProps> = () => {
   return (
     <Stack
-      sx={{ py: 4 }}
-      display="flex"
+      py={{ xs: 3, md: 5, lg: 15 }}
       justifyContent="space-between"
       alignItems="center"
-      flexDirection="column"
       height="100%"
-      flex="1 0 0"
     >
       <Typography variant="h3">Want to hire me?</Typography>
-
-      <Typography
-        variant="subtitle1"
-        sx={(theme) => ({
-          color: theme.palette.text.primary,
-        })}
-      >
-        I strive to reply within an hour.
-      </Typography>
-      <Stack
-        flexDirection="row"
-        gap={1.25}
-        p={2}
-        alignItems="center"
-        height={62}
-      >
-        <MailIcon
+      <Stack flexDirection="column" alignItems="center">
+        <Typography
+          variant="subtitle1"
           sx={(theme) => ({
-            height: 30,
-            width: 30,
-            color: theme.palette.success.dark,
+            color: theme.palette.text.primary,
           })}
-        />
-        <Typography variant="overline">EMAIL</Typography>
+        >
+          I strive to reply within an hour.
+        </Typography>
+        <Stack flexDirection="row" gap={1.5} p={2} alignItems="center">
+          <IconButton
+            sx={(theme) => ({
+              color: theme.palette.success.dark,
+            })}
+          >
+            <MailIcon />
+          </IconButton>
+          <Typography variant="overline">EMAIL</Typography>
+        </Stack>
       </Stack>
-
       <Stack
         px={2}
         justifyContent="center"
@@ -54,33 +48,37 @@ const Row1 = () => {
       >
         <Box
           sx={(theme) => ({
-            width: "171px",
-            height: "2px",
             bgcolor: theme.palette.text.secondary,
           })}
+          height={{ xs: 2 }}
+          width={{ xs: 171, lg: 120, xl: 171 }}
         ></Box>
         <Typography variant="h5">or</Typography>
         <Box
+          height={{ xs: 2 }}
+          width={{ xs: 171, lg: 120, xl: 171 }}
           sx={(theme) => ({
-            width: "171px",
-            height: "2px",
             bgcolor: theme.palette.text.secondary,
           })}
         ></Box>
       </Stack>
-      <Stack justifyContent="center" alignItems="center" flexDirection="row">
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="row"
+        flexWrap="wrap"
+        gap={1}
+      >
         <IconButton
           sx={(theme) => ({
-            height: 62,
             p: 2,
             alignItems: "center",
             gap: 1.25,
-            borderRadius: 16,
             bgcolor: theme.palette.info.main,
             color: theme.palette.text.disabled,
           })}
         >
-          <FacebookRoundedIcon sx={{ height: 30, width: 30 }} />
+          <FacebookRoundedIcon />
         </IconButton>
         <IconButton
           sx={(theme) => ({
@@ -93,7 +91,7 @@ const Row1 = () => {
             color: theme.palette.text.disabled,
           })}
         >
-          <AddCircleOutlineRoundedIcon sx={{ height: 30, width: 30 }} />
+          <AddCircleOutlineRoundedIcon />
         </IconButton>
         <IconButton
           sx={(theme) => ({
@@ -106,7 +104,7 @@ const Row1 = () => {
             color: theme.palette.text.disabled,
           })}
         >
-          <CloudUploadRoundedIcon sx={{ height: 30, width: 30 }} />
+          <CloudUploadRoundedIcon />
         </IconButton>
         <IconButton
           sx={(theme) => ({
@@ -119,11 +117,11 @@ const Row1 = () => {
             color: theme.palette.text.disabled,
           })}
         >
-          <SubscriptionsRoundedIcon sx={{ height: 30, width: 30 }} />
+          <SubscriptionsRoundedIcon />
         </IconButton>
       </Stack>
     </Stack>
   );
 };
 
-export default Row1;
+export default HomeHelpInfo;

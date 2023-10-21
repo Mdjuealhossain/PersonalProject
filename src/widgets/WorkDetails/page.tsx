@@ -1,8 +1,9 @@
-"use client";
-import React from "react";
+import { FC } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 
-const Row2 = () => {
+import { WorkDetailsProps } from "./Types";
+
+const WorkDetails: FC<WorkDetailsProps> = () => {
   return (
     <Stack sx={{ pt: 4 }} flexDirection="column" alignItems="center">
       <Typography variant="h3">My experience so far</Typography>
@@ -81,4 +82,4 @@ const Row2 = () => {
   );
 };
 
-export default Row2;
+export default WorkDetails;

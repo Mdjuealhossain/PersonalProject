@@ -1,7 +1,9 @@
+import React, { FC } from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
 
-const Colum = () => {
+import { HomeDetailsProps } from "./Types";
+
+const HomeDetails: FC<HomeDetailsProps> = () => {
   return (
     <Stack sx={{ py: 15, pr: 2 }} justifyContent="space-between" height="100%">
       <Stack flexDirection="column" pb={3.6} gap={1.25} alignItems="flex-start">
@@ -70,4 +72,4 @@ const Colum = () => {
   );
 };
 
-export default Colum;
+export default HomeDetails;

@@ -1,5 +1,5 @@
-import React from "react";
-import { Stack, Typography, IconButton, Box, CardMedia } from "@mui/material";
+import { FC } from "react";
+import { Stack, IconButton, CardMedia } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -7,7 +7,9 @@ import StackedLineChartIcon from "@mui/icons-material/StackedLineChart";
 import SportsMmaIcon from "@mui/icons-material/SportsMma";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 
-const IconWraper = ({ children }: any) => {
+import { AboutHelpInfoProps, IconWraperPropsProps } from "./Types";
+
+const IconWraper: FC<IconWraperPropsProps> = ({ children }: any) => {
   return (
     <IconButton
       sx={(theme) => ({
@@ -24,7 +26,7 @@ const IconWraper = ({ children }: any) => {
   );
 };
 
-const Colum1 = () => {
+const AboutHelpInfo: FC<AboutHelpInfoProps> = () => {
   return (
     <Stack
       py={15}
@@ -72,4 +74,4 @@ const Colum1 = () => {
   );
 };
 
-export { Colum1, IconWraper };
+export { AboutHelpInfo, IconWraper };

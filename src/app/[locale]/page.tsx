@@ -1,8 +1,8 @@
 "use client";
 import { Box, Grid, Container } from "@mui/material";
 
-import Colum2 from "src/widgets/HomeComponents/colum2";
-import Colum from "src/widgets/HomeComponents/colum1";
+import HomeHelpInfo from "src/widgets/HomeHelpInfo";
+import HomeDetails from "src/widgets/HomeDatials";
 
 export default function Home() {
   return (
@@ -10,10 +10,10 @@ export default function Home() {
       <Container sx={{ height: "100%" }}>
         <Grid container height="100%">
           <Grid item xs={12} md={6}>
-            <Colum />
+            <HomeDetails />
           </Grid>
           <Grid xs={12} md={6}>
-            <Colum2 />
+            <HomeHelpInfo />
           </Grid>
         </Grid>
       </Container>

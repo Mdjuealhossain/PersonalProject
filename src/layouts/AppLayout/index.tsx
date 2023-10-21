@@ -7,9 +7,9 @@ import { useTheme } from "@mui/material/styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
 import { ColorModeContext } from "src/theme";
-import Sidbar from "src/widgets/FigSideBar";
+import SideBar from "src/widgets/SideBar";
 
-import { FigLayoutProps } from "./type";
+import { AppLayoutProps } from "./type";
 
 const ColorMode = () => {
   const { toggleColorMode } = useContext(ColorModeContext);
@@ -36,13 +36,13 @@ const ColorMode = () => {
   );
 };
 
-const FigLayout: FC<FigLayoutProps> = ({ children }) => {
+const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <>
       <ColorMode />
       <Stack flexDirection="row" height="100%">
         <Box width={300}>
-          <Sidbar />
+          <SideBar />
         </Box>
         <Box width="calc(100% - 300px)">{children}</Box>
       </Stack>
@@ -50,4 +50,4 @@ const FigLayout: FC<FigLayoutProps> = ({ children }) => {
   );
 };
 
-export default FigLayout;
+export default AppLayout;

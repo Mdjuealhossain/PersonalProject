@@ -1,7 +1,9 @@
-import React from "react";
-import { Stack, Typography, IconButton, Box, CardMedia } from "@mui/material";
+import { FC } from "react";
+import { Stack, Typography, Box } from "@mui/material";
 
-const colum2 = () => {
+import { AboutDetailsProps } from "./Types";
+
+const AboutDetails: FC<AboutDetailsProps> = () => {
   return (
     <Stack
       py={16}
@@ -56,4 +58,4 @@ const colum2 = () => {
   );
 };
 
-export default colum2;
+export default AboutDetails;

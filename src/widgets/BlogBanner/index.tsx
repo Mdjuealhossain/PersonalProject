@@ -1,9 +1,11 @@
-"use client";
+import { FC } from "react";
 import { Box, Button, CardMedia, Stack, Typography } from "@mui/material";
-import React from "react";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-const BlogHeader = () => {
+
+import { BlogBannerProps } from "./Types";
+
+const BlogBanner: FC<BlogBannerProps> = () => {
   return (
     <Stack>
       <CardMedia
@@ -38,4 +40,4 @@ const BlogHeader = () => {
   );
 };
 
-export default BlogHeader;
+export default BlogBanner;
