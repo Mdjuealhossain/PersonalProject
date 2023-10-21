@@ -1,4 +1,3 @@
-"use client";
 import { FC } from "react";
 import { Box, Button, CardMedia, Stack, Typography } from "@mui/material";
 import YouTubeIcon from "@mui/icons-material/YouTube";
