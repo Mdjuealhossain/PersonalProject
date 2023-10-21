@@ -1,16 +1,13 @@
 "use client";
+import React from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
-import React, { FC } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { IconWraper } from "src/widgets/AboutDetails";
 
-interface Props {
-  Icon: JSX.Element;
-}
+import { IconWraper } from "src/widgets/AboutHelpInfo";
 
-const AboutPage: FC<Props> = ({ Icon }) => {
+const AboutPage = () => {
   return (
     <Box>
       <Container>

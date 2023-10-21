@@ -1,8 +1,8 @@
-import { Grid } from "@mui/material";
 import { useLocale } from "next-intl";
-import { notFound } from "next/navigation";
-import FigLayout from "src/layouts/FigmaproLayout";
 
+import { notFound } from "next/navigation";
+
+import AppLayout from "src/layouts/AppLayout";
 import ThemeContextProvider from "src/theme";
 
 export const metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang={locale}>
       <ThemeContextProvider>
         <body suppressHydrationWarning={true}>
-          <FigLayout> {children}</FigLayout>
+          <AppLayout> {children}</AppLayout>
         </body>
       </ThemeContextProvider>
     </html>
