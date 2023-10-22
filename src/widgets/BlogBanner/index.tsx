@@ -23,7 +23,7 @@ const BlogBanner: FC<BlogBannerProps> = () => {
                 borderRadius: 2,
               })}
             >
-              <Typography variant="h1">Learn somthing new</Typography>
+              <Typography variant="h2">Learn somthing new</Typography>
             </Box>
             <Stack pt={5} gap={2} flexDirection="row">
               <Button variant="contained" size="large">
