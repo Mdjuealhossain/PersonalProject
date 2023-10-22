@@ -1,13 +1,14 @@
 "use client";
 import { FC, useContext } from "react";
 
-import { Box, IconButton, Stack } from "@mui/material";
+import { Box, Hidden, IconButton, Stack } from "@mui/material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useTheme } from "@mui/material/styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
 import { ColorModeContext } from "src/theme";
 import SideBar from "src/widgets/SideBar";
+import Header from "src/widgets/Header";
 
 import { AppLayoutProps } from "./type";
 
@@ -18,20 +19,16 @@ const ColorMode = () => {
     theme.palette.mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />;
   return (
     <Box
-      position="absolute"
-      right={0}
-      top="50%"
-      width={60}
-      height={50}
       sx={(theme) => ({
         bgcolor: theme.palette.success.light,
-        display: { xs: "none", lg: "flex" },
       })}
       justifyContent="center"
       alignItems="center"
       borderRadius="32px 0 0 32px"
     >
-      <IconButton onClick={toggleColorMode}>{mode}</IconButton>
+      <IconButton onClick={toggleColorMode} sx={{ height: 60, width: 50 }}>
+        {mode}
+      </IconButton>
     </Box>
   );
 };
@@ -39,12 +36,25 @@ const ColorMode = () => {
 const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <>
-      <ColorMode />
-      <Stack flexDirection="row" height="100%">
-        <Box width={300}>
-          <SideBar />
+      <Hidden mdDown>
+        <Box position="absolute" right={0} top={400}>
+          <ColorMode />
         </Box>
-        <Box width="calc(100% - 300px)">{children}</Box>
+      </Hidden>
+      <Hidden mdUp>
+        <Box>
+          <Header />
+        </Box>
+      </Hidden>
+      <Stack flexDirection="row" height="100%" mt={{ xs: 8, md: 0 }}>
+        <Hidden mdDown>
+          <Box width={300}>
+            <SideBar />
+          </Box>
+        </Hidden>
+        <Box width={{ md: "calc(100% - 300px)", xs: "100%" }} px={2}>
+          {children}
+        </Box>
       </Stack>
     </>
   );

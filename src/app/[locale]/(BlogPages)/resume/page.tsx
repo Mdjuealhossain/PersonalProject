@@ -7,16 +7,20 @@ import TopTitle from "src/widgets/TopTitle";
 
 const Resume = () => {
   return (
-    <Box pt={8}>
+    <Box py={{ md: 5 }}>
       <Container>
-        <Grid container columnSpacing={6} rowSpacing={5}>
+        <Grid
+          container
+          columnSpacing={{ md: 6, xs: 0 }}
+          rowSpacing={{ xs: 8, md: 0 }}
+        >
           <Grid item xs={12}>
             <TopTitle title="summary" subtitle="Resume" />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Education />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Experience />
           </Grid>
           <Grid item xs={12}>

@@ -19,7 +19,7 @@ const IconWraper: FC<IconWraperPropsProps> = ({ children }) => {
 
 const AboutHelpInfo: FC<AboutHelpInfoProps> = () => {
   return (
-    <Stack py={15} flexDirection="column" alignItems="center" gap={4}>
+    <Stack py={6} flexDirection="column" alignItems="center" gap={4}>
       <Box sx={(theme) => ({ border: `8px solid ${theme.palette.grey[300]}` })}>
         <CardMedia
           sx={{ maxWidth: 277 }}

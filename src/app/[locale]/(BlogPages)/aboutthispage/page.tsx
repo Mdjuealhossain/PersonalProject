@@ -9,8 +9,8 @@ import { IconWraper } from "src/widgets/AboutHelpInfo";
 
 const AboutPage = () => {
   return (
-    <Box>
-      <Container>
+    <Box height="100%" py={{ xs: 3, md: 5, lg: 15 }}>
+      <Container sx={{ height: "100%" }}>
         <Stack
           height="100%"
           flexDirection="column"
@@ -19,7 +19,7 @@ const AboutPage = () => {
           flex="1 00"
           sx={() => ({
             py: 4,
-            px: 8,
+            px: 2,
           })}
         >
           <Typography width="100%" variant="h3" sx={{ textAlign: "center" }}>
@@ -70,15 +70,10 @@ const AboutPage = () => {
               alignItems: "center",
               gap: 10,
               borderRadius: 2,
-              bgcolor: theme.palette.info.main,
+              bgcolor: theme.palette.grey[100],
             })}
           >
-            <Typography
-              variant="h2"
-              sx={(theme) => ({ color: theme.palette.success.dark })}
-            >
-              Sponsor me on GitHub
-            </Typography>
+            <Typography variant="h2">Sponsor me on GitHub</Typography>
           </Box>
         </Stack>
       </Container>

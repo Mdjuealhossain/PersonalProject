@@ -11,7 +11,6 @@ import { WorkHelpInfoProps } from "./Types";
 const WorkHelpInfo: FC<WorkHelpInfoProps> = () => {
   return (
     <Stack
-      sx={{ py: 4 }}
       justifyContent="space-between"
       alignItems="center"
       flexDirection="column"

@@ -31,7 +31,7 @@ const MySkills: FC<MySkillsProps> = () => {
             <Typography variant="h5">My Skills</Typography>
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Stack gap={4}>
             <Stack>
               <Stack gap={2}>
@@ -80,7 +80,7 @@ const MySkills: FC<MySkillsProps> = () => {
             </Stack>
           </Stack>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Stack gap={4}>
             <Stack>
               <Stack gap={2}>
