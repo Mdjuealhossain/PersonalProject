@@ -26,18 +26,19 @@ export default {
   fontWeightMedium: 500,
   fontWeightBold: 700,
   h1: {
+    ...roboto.style,
+    fontWeight: 600,
+    fontSize: "8.2rem",
+    lineHeight: 1.3,
+    textTransform: "uppercase",
+  },
+
+  h2: {
     fontFamily: "cursive",
     fontWeight: 600,
     fontSize: "3.5rem",
     lineHeight: 1.167,
     letterSpacing: "-0.01562em",
-  },
-  h2: {
-    ...roboto.style,
-    fontWeight: 700,
-    fontSize: "24px",
-    lineHeight: "normal",
-    textTransform: "uppercase",
   },
   h3: {
     ...roboto.style,
@@ -55,10 +56,10 @@ export default {
   },
   h5: {
     ...roboto.style,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 24,
     lineHeight: 1.334,
-    letterSpacing: "0em",
+    letterSpacing: "0.0075em",
   },
   h6: {
     ...roboto.style,
