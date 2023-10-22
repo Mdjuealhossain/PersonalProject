@@ -8,17 +8,17 @@ import TopTitle from "src/widgets/TopTitle";
 
 const About = () => {
   return (
-    <Box pt={8}>
+    <Box py={{ md: 5 }}>
       <Container>
         <Grid container rowSpacing={5}>
           <Grid item xs={12}>
             <TopTitle title="about me" subtitle="Know Me More" />
           </Grid>
           <Grid container item xs={12}>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <AboutHelpInfo />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <AboutDetails />
             </Grid>
           </Grid>

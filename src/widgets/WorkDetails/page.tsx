@@ -5,7 +5,7 @@ import { WorkDetailsProps } from "./Types";
 
 const WorkDetails: FC<WorkDetailsProps> = () => {
   return (
-    <Stack sx={{ pt: 4 }} flexDirection="column" alignItems="center">
+    <Stack flexDirection="column" alignItems="center">
       <Typography variant="h3">My experience so far</Typography>
       <Stack
         height="100%"

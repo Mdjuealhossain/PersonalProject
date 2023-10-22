@@ -5,14 +5,10 @@ import { AboutDetailsProps } from "./Types";
 
 const AboutDetails: FC<AboutDetailsProps> = () => {
   return (
-    <Stack
-      py={16}
-      flexDirection="column"
-      alignItems="flex-start"
-      gap={1.25}
-      height="100%"
-    >
-      <Typography variant="h3">About me</Typography>
+    <Stack py={6} flexDirection="column" gap={1.25} height="100%">
+      <Box textAlign="center">
+        <Typography variant="h3">About me</Typography>
+      </Box>
       <Stack
         flexDirection="column"
         justifyContent="center"
@@ -22,7 +18,7 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
         <Stack flexDirection="row" alignItems="center">
           <Box>
             <Typography variant="body2" display="inline-block" pr={1}>
-              I’m a{" "}
+              I’m a
             </Typography>
             <Typography
               display="inline-block"

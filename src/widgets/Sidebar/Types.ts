@@ -1,1 +1,3 @@
-export interface SideBarProps {}
+export interface SideBarProps {
+  onClose?: any;
+}

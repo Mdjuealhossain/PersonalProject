@@ -1,5 +1,13 @@
 import { FC } from "react";
-import { Box, Link, Stack, Typography, Paper } from "@mui/material";
+import {
+  Box,
+  Link,
+  Stack,
+  Typography,
+  Paper,
+  IconButton,
+  Avatar,
+} from "@mui/material";
 import FolderSharedRoundedIcon from "@mui/icons-material/FolderSharedRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import HomeRepairServiceSharpIcon from "@mui/icons-material/HomeRepairServiceSharp";
@@ -13,7 +21,7 @@ const navData = [
   {
     id: 1,
     title: "Home",
-    icon: <HomeRoundedIcon sx={{ fontSize: 30 }} color="action" />,
+    icon: <HomeRoundedIcon sx={{ fontSize: 30 }} />,
     link: "/",
   },
   {
@@ -48,13 +56,13 @@ const navData = [
   },
 ];
 
-const SideBar: FC<SideBarProps> = () => {
+const SideBar: FC<SideBarProps> = ({ onClose }) => {
   return (
     <Paper
       square
       sx={(theme) => ({
         width: theme.spacing(37.5),
-        height: "100vh",
+        height: "100%",
         overflow: "hidden",
         position: "fixed",
         top: 0,
@@ -62,21 +70,18 @@ const SideBar: FC<SideBarProps> = () => {
       })}
     >
       <Stack justifyContent="space-between" height="100%">
-        <Typography
-          position="absolute"
-          sx={{
-            top: { xs: 45 },
-            left: { xs: 18, sm: 25, md: 135 },
-          }}
-          variant="h4"
-        >
-          GD
-        </Typography>
+        <Box position="absolute" alignSelf="center" top={{ xs: 122, md: 80 }}>
+          <Avatar
+            sx={{ height: { xs: 90 }, width: { xs: 90 } }}
+            src="https://avatars.githubusercontent.com/u/123495777?s=400&u=0e510f3b9b75f6c7ed4a37632f165e341f4d14d8&v=4"
+            alt="MJ"
+          />
+        </Box>
 
         <Stack
           flexDirection="column"
           pr={{ xs: 1, md: 0 }}
-          pt={16}
+          pt={{ xs: 40, md: 26 }}
           alignItems="flex-start"
           gap={2}
           height="calc(100% - 48px)"
@@ -84,24 +89,26 @@ const SideBar: FC<SideBarProps> = () => {
           {navData.map((data) => {
             const { id, title, icon, link } = data;
             return (
-              <Link
-                href={`${link}`}
-                display="flex"
+              <Stack
                 key={id}
-                height={48}
+                flexDirection="row"
                 px={2}
                 gap={2}
                 justifyContent="center"
                 alignItems="center"
               >
-                <Box sx={{ height: 24, width: 27 }}>{icon}</Box>
-                <Typography
+                <IconButton component={Link} href={`${link}`} onClick={onClose}>
+                  {icon}
+                </IconButton>
+                <Link
+                  color="text.secondary"
+                  href={`${link}`}
                   variant="h5"
-                  sx={{ display: { xs: "none", md: "inline" } }}
+                  onClick={onClose}
                 >
                   {title}
-                </Typography>
-              </Link>
+                </Link>
+              </Stack>
             );
           })}
         </Stack>
