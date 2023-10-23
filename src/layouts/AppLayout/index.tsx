@@ -24,7 +24,7 @@ const ColorMode = () => {
       })}
       justifyContent="center"
       alignItems="center"
-      borderRadius="32px 0 0 32px"
+      borderRadius="32px 0 0 31px"
     >
       <IconButton onClick={toggleColorMode} sx={{ height: 60, width: 50 }}>
         {mode}
