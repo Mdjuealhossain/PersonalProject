@@ -9,7 +9,7 @@ import AspectRatioIcon from "@mui/icons-material/AspectRatio";
 import AutoGraphOutlinedIcon from "@mui/icons-material/AutoGraphOutlined";
 import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 
-import { NavOptions } from "src/global/types";
+import { NavOptions } from "global/types";
 
 export const NAVIGATIONS: NavOptions[] = [
   {
