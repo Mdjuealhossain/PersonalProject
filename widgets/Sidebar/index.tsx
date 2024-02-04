@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import {
   Box,
   Link,
@@ -7,6 +7,9 @@ import {
   Paper,
   IconButton,
   Avatar,
+  List,
+  ListItemButton,
+  ListItemText,
 } from "@mui/material";
 import FolderSharedRoundedIcon from "@mui/icons-material/FolderSharedRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
@@ -56,6 +59,7 @@ const navData = [
 ];
 
 const Sidebar: FC<SidebarProps> = ({ onClose }) => {
+  const [isActive, setIsActive] = useState(false);
   return (
     <Paper
       square
@@ -69,9 +73,16 @@ const Sidebar: FC<SidebarProps> = ({ onClose }) => {
       })}
     >
       <Stack justifyContent="space-between" height="100%">
-        <Box position="absolute" alignSelf="center" top={{ xs: 122, md: 80 }}>
+        <Box
+          position="absolute"
+          alignSelf="center"
+          border={8}
+          borderColor={(theme) => theme.palette.action.focus}
+          borderRadius="50%"
+          top={{ xs: 92, md: 60 }}
+        >
           <Avatar
-            sx={{ height: { xs: 90 }, width: { xs: 90 } }}
+            sx={{ height: { xs: 90, md: 110 }, width: { xs: 90, md: 110 } }}
             src="https://avatars.githubusercontent.com/u/123495777?s=400&u=0e510f3b9b75f6c7ed4a37632f165e341f4d14d8&v=4"
             alt="MJ"
           />
@@ -80,7 +91,7 @@ const Sidebar: FC<SidebarProps> = ({ onClose }) => {
         <Stack
           flexDirection="column"
           pr={{ xs: 1, md: 0 }}
-          pt={{ xs: 40, md: 26 }}
+          pt={{ xs: 30, md: 26 }}
           alignItems="flex-start"
           gap={2}
           height="calc(100% - 48px)"
@@ -88,26 +99,29 @@ const Sidebar: FC<SidebarProps> = ({ onClose }) => {
           {navData.map((data) => {
             const { id, title, icon, link } = data;
             return (
-              <Stack
+              <List
+                disablePadding
                 key={id}
-                flexDirection="row"
-                px={2}
-                gap={2}
-                justifyContent="center"
-                alignItems="center"
+                sx={{
+                  px: 2,
+                  gap: 2,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                }}
+                component={Link}
+                href={`${link}`}
+                onClick={onClose}
               >
-                <IconButton component={Link} href={`${link}`} onClick={onClose}>
-                  {icon}
-                </IconButton>
-                <Link
-                  color="text.secondary"
-                  href={`${link}`}
-                  variant="h5"
-                  onClick={onClose}
-                >
-                  {title}
-                </Link>
-              </Stack>
+                <ListItemButton selected={isActive} sx={{ p: 0 }}>
+                  <IconButton>{icon}</IconButton>
+                  <ListItemText>
+                    <Typography color="text.secondary" variant="h5">
+                      {title}
+                    </Typography>
+                  </ListItemText>
+                </ListItemButton>
+              </List>
             );
           })}
         </Stack>

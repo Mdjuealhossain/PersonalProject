@@ -13,16 +13,19 @@ import { BlogCardProps } from "./type";
 const BlogCard: FC<BlogCardProps> = ({ title, des, img, alt }) => {
   return (
     <Card
-      variant="outlined"
       sx={(theme) => ({
-        color: theme.palette.common.black,
-        height: "100%",
         p: 4,
+        transform: 15,
       })}
     >
       <Stack alignItems="center" pb={3}>
         <CardMedia
-          sx={{ borderRadius: "50%", width: 120, border: "none" }}
+          sx={(theme) => ({
+            borderRadius: "50%",
+            width: 120,
+            border: 2,
+            borderColor: theme.palette.action.hover,
+          })}
           height={120}
           component="img"
           image={img}
@@ -31,7 +34,6 @@ const BlogCard: FC<BlogCardProps> = ({ title, des, img, alt }) => {
       </Stack>
       <CardContent>
         <Box textAlign="center">
-          {" "}
           <Typography variant="h5" pb={3} sx={{ fontWeight: 800 }}>
             {title}
           </Typography>

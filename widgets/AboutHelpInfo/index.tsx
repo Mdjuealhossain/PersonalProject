@@ -20,12 +20,17 @@ const IconWraper: FC<IconWraperPropsProps> = ({ children }) => {
 const AboutHelpInfo: FC<AboutHelpInfoProps> = () => {
   return (
     <Stack py={6} flexDirection="column" alignItems="center" gap={4}>
-      <Box sx={(theme) => ({ border: `8px solid ${theme.palette.grey[300]}` })}>
+      <Box
+        sx={(theme) => ({
+          border: `4px solid ${theme.palette.grey[300]}`,
+          ":hover": { boxShadow: 1 },
+        })}
+      >
         <CardMedia
           sx={{ maxWidth: 277 }}
           component="img"
           height={348}
-          image="https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/335031868_1823057784744716_3631202048498529098_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEKgNwnstAwTmHXM9s9a2LGy0KLuRvZkADLQou5G9mQADCQP-vB7s4yyyGJePlXz3ozEOqbF1SXxLU8oxGjGD0q&_nc_ohc=e6pqE1qEgJIAX_Y7EQv&_nc_ht=scontent.fdac151-1.fna&oh=00_AfAV7RG12Dv6xzB4lBjAZ5Li2vrbTjFODn5gnSA2KQcXiw&oe=65397134"
+          image="https://scontent.fdac151-1.fna.fbcdn.net/v/t1.6435-9/57183841_350708698896126_7610830156164235264_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeFaElRGqUVej9W3pHRzUJYzekZmaJR7xdZ6RmZolHvF1s_RFSaCIhmJ_z_gS4uUbj4a_8ibG42oZlFVJ_U8AMvQ&_nc_ohc=waX62YVXMaMAX-Vp8Sc&_nc_ht=scontent.fdac151-1.fna&oh=00_AfDwh9XihCnxh5nAXANpTzRL7mnxw4ZfQEDbELYapEGI6A&oe=65E6E67C"
           alt="MJ"
         ></CardMedia>
       </Box>

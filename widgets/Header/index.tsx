@@ -38,21 +38,23 @@ const Header: FC<HeaderProps> = () => {
                 alt="JL"
               ></Avatar>
             </Stack>
-            <IconButton>
-              <GitHubIcon />
-            </IconButton>
-            <IconButton>
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton onClick={toggleColorMode}>{mode}</IconButton>
-            <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon />
-            </IconButton>
-            <Drawer open={open} onClose={() => setOpen(false)} elevation={0}>
-              <Sidebar onClose={() => setOpen(false)} />
-            </Drawer>
+            <Box>
+              <IconButton>
+                <GitHubIcon />
+              </IconButton>
+              <IconButton>
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton onClick={toggleColorMode}>{mode}</IconButton>
+              <IconButton onClick={() => setOpen(true)}>
+                <MenuIcon />
+              </IconButton>
+            </Box>
           </Toolbar>
         </AppBar>
+        <Drawer open={open} onClose={() => setOpen(false)} elevation={0}>
+          <Sidebar onClose={() => setOpen(false)} />
+        </Drawer>
       </Container>
     </Box>
   );

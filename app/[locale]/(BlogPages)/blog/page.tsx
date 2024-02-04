@@ -1,6 +1,6 @@
 "use client";
-import { Box, Container, Grid } from "@mui/material";
 import React from "react";
+import { Box, Container, Grid } from "@mui/material";
 
 import BlogBanner from "widgets/BlogBanner";
 import BlogCards from "widgets/BlogCards";
